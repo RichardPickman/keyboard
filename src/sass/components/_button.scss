@@ -1,0 +1,85 @@
+.key {
+    background-color: black;
+    border: 0;
+    border-radius: 8px;
+    color: #B22222;
+    font-size: 1.3em;
+    flex-grow: 1;
+    text-align: center;
+    animation: lighten 0.3s forwards;
+
+    box-shadow: 0 0 0.3em #B22222, inset 0 0 black;
+
+    &:hover {
+        animation: darken 0.3s forwards;
+    }
+}
+
+.setDark {
+    animation: darken 0.2s;
+}
+
+.setLight {
+    animation: lighten 0.3s;
+}
+
+@keyframes darken {
+    from {
+        box-shadow: 0 0 1rem #B22222, inset 0 0 black;
+    }
+
+    to {
+        box-shadow: 0 0 1rem #000000, inset 0 0 black;
+    }
+}
+
+@keyframes lighten {
+    from {
+        box-shadow: 0 0 1rem #000000, inset 0 0 black;
+    }
+    
+    to {
+        box-shadow: 0 0 1rem #B22222, inset 0 0 black;
+    }
+}
+
+
+#Backspace13 {
+    grid-column-start: 14;
+    grid-column-end: 17;
+}
+
+#Tab14 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#Del28 {
+    grid-column-start: 16;
+    grid-column-end: 17;
+}
+
+#Caps29 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#Enter41 {
+    grid-column-start: 14;
+    grid-column-end: 17;
+}
+
+#Space58 {
+    grid-column-start: 4;
+    grid-column-end: 12;
+}
+
+#Shift42 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#Shift54 {
+    grid-column-start: 15;
+    grid-column-end: 17;
+}
