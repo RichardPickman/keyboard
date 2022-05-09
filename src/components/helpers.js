@@ -60,7 +60,7 @@ export const textAreaHandler = (symbol, keyboardState) => {
   const indexLetter = layout.CODES.findIndex((code) => code === symbol);
   const currentLetter = keyboardState.layout[indexLetter];
 
-  if (indexLetter) changeColor(keyboard[indexLetter]);
+  if (indexLetter > -1) changeColor(keyboard[indexLetter]);
 
   if (currentLetter === 'Space') {
     handleText('append', ' ');
