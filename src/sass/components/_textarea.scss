@@ -1,14 +1,16 @@
 .text {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 #textarea {
+    margin: 10px;
     resize: none;
     outline: none;
     color: #B22222;
     background-color: black;
     box-shadow: 0 0 0.3em #B22222, inset 0 0 black;
     font-size: 3em;
-    letter-spacing: 1px;
     padding: 14px;
+    border-radius: 10px;
 }

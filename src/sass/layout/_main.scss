@@ -2,5 +2,13 @@
 @use '../abstracts/mixins' as *;
 
 body {
-    background-color: $primary-color;
+    background-color: $secondary-color;
+    color: $primary-color;
+}
+
+.info {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 1.5em;
 }
