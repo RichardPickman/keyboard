@@ -8,7 +8,7 @@ module.exports = {
     entry: [paths.src + '/index.js'],
     output: {
         path: paths.build,
-        filename: '[name].[hash].js',
+        filename: '[name].bundle.js',
         assetModuleFilename: '[file]',
         clean: true,
     },
