@@ -6,7 +6,7 @@ export function changeKeys(dict) {
 
   keyboard.forEach((item, index) => {
     const element = item;
-    element.textContent = keys[index];
+    element.dataset.key = keys[index];
   });
 }
 

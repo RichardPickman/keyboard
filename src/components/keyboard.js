@@ -8,7 +8,7 @@ const createKeyboard = (lang = layout.ENG) => {
   lang.forEach((item, index) => {
     const key = document.createElement('button');
     key.setAttribute('class', 'key');
-    key.textContent = item;
+    key.dataset.key = item;
     key.setAttribute('id', `${layout.CODES[index]}`);
 
     keyboard.append(key);
