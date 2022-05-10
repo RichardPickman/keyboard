@@ -7,8 +7,8 @@ const createTextArea = () => {
   const textarea = document.createElement('textarea');
   textarea.setAttribute('id', 'textarea');
   textarea.setAttribute('autofocus', '');
-  textarea.cols = 40;
-  textarea.rows = 6;
+  textarea.cols = 51;
+  textarea.rows = 8;
   textarea.placeholder = 'Type your text....';
 
   text.append(textarea);
