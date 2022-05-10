@@ -22,7 +22,7 @@
         top: 8px;
         content: "";
         border-radius: 3px;
-        background-color: rgba(105, 105, 105, 0.3);
+        background-color: rgba(77, 77, 77, 0.3);
         width: 70%;
         height: 60%;
     }
@@ -50,7 +50,16 @@
     }
 }
 
+#Backslash {
+    grid-column-start: 15;
+    grid-column-end: 17;
+    &::before {
+        width: 84%;
+    }
+}
+
 #Delete {
+    display: none;
     grid-column-start: 16;
     grid-column-end: 17;
 }
@@ -59,7 +68,7 @@
     grid-column-start: 1;
     grid-column-end: 3;
     &::before {
-        width: 94%;
+        width: 85%;
     }
 }
 
