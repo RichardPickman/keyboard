@@ -1,21 +1,16 @@
 @use '../abstracts/animations';
+@use '../abstracts/mixins' as *;
 
 .key {
     display: flex;
     position: relative;
     justify-content: center;
     padding-top: 13px;
-    background-color: #000000;
-    border-radius: 8px;
-    color: rgba(178, 34, 34, 1);
-    font-weight: 600;
-    font-size: 1.3em;
-    flex-grow: 1;
+    font-size: 1.3rem;
+    background: rgba(50, 50, 50, 1);
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 1);
     animation: rgbShadow 10s infinite;
-
-    &:hover {
-        animation: darken 0.3s forwards;
-    }
 
     &::before {
         position: absolute;
@@ -29,7 +24,7 @@
 }
 
 .setColor {
-    color: #B22222;
+    color: rgba(255, 255, 255, 1);
     transform: scale(0.95) translate(3px);
     animation: shrink 0.3s forwards;
 }

@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+@mixin font {
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
 @mixin reset-list {
     margin: 0;
     padding: 0;

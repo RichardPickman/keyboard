@@ -6,11 +6,11 @@
 }
 
 #textarea {
-    margin: 10px;
     resize: none;
     outline: none;
-    animation: rgbShadow 10s infinite;
-    font-size: 3em;
-    padding: 14px;
-    border-radius: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    font-size: 2em;
 }
