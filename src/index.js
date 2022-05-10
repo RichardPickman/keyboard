@@ -8,7 +8,7 @@ import {
   getLanguageFromStorage,
 } from './components/helpers';
 import * as layout from './layouts/index';
-import Keyboard from './classes/keyboard'
+import Keyboard from './classes/keyboard';
 
 window.onload = function App() {
   createElements();
