@@ -1,61 +1,53 @@
+@use '../abstracts/animations';
+
 .key {
-    background-color: black;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding-top: 13px;
+    background-color: #000000;
     border-radius: 8px;
-    color: #B22222;
+    color: rgba(178, 34, 34, 1);
     font-weight: 600;
     font-size: 1.3em;
     flex-grow: 1;
-    animation: lighten 0.3s forwards;
-    box-shadow: 0 0 0.3em #B22222;
+    animation: rgbShadow 10s infinite;
 
     &:hover {
         animation: darken 0.3s forwards;
     }
+
+    &::before {
+        position: absolute;
+        top: 8px;
+        content: "";
+        border-radius: 3px;
+        background-color: rgba(105, 105, 105, 0.3);
+        width: 70%;
+        height: 60%;
+    }
 }
 
 .setColor {
-    background-color: #B22222;
-    border: 2px solid #000000;
-    color: black;
+    color: #B22222;
+    transform: scale(0.95) translate(3px);
+    animation: shrink 0.3s forwards;
 }
-
-.setDark {
-    animation: darken 0.2s;
-}
-
-.setLight {
-    animation: lighten 0.3s;
-}
-
-@keyframes darken {
-    from {
-        box-shadow: 0 0 0.7rem #B22222, inset 0 0 black;
-    }
-
-    to {
-        box-shadow: 0 0 0.7rem #000000, inset 0 0 black;
-    }
-}
-
-@keyframes lighten {
-    from {
-        box-shadow: 0 0 0.7rem #000000, inset 0 0 black;
-    }
-    
-    to {
-        box-shadow: 0 0 0.7rem #B22222, inset 0 0 black;
-    }
-}
-
 
 #Backspace {
     grid-column-start: 14;
     grid-column-end: 17;
+    &::before {
+        width: 88%;
+    }
 }
 
 #Tab {
     grid-column-start: 1;
     grid-column-end: 3;
+    &::before {
+        width: 85%;
+    }
 }
 
 #Delete {
@@ -66,24 +58,39 @@
 #CapsLock {
     grid-column-start: 1;
     grid-column-end: 3;
+    &::before {
+        width: 94%;
+    }
 }
 
 #Enter {
     grid-column-start: 14;
     grid-column-end: 17;
+    &::before {
+        width: 88%;
+    }
 }
 
 #Space {
     grid-column-start: 4;
     grid-column-end: 12;
+    &::before {
+        width: 95%;
+    }
 }
 
 #ShiftLeft {
     grid-column-start: 1;
     grid-column-end: 4;
+    &::before {
+        width: 88%;
+    }
 }
 
 #ShiftRight {
     grid-column-start: 15;
     grid-column-end: 17;
+    &::before {
+        width: 85%;
+    }
 }

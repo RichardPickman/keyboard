@@ -1,0 +1,65 @@
+@keyframes shrink {
+    from {
+        width: 100%;
+        height: 100%;
+    }
+    
+    to {
+        width: 93%;
+        height: 93%;
+    }
+}
+
+@keyframes unshrink {
+    from {
+        width: 93%;
+        height: 93%;
+    }
+
+    to {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes rgbShadow {
+    0% {
+        box-shadow: 0 0 0.5em #ed8080;
+    }
+    16% {
+        box-shadow: 0 0 0.5em #2a77d6;
+    }
+    32% {
+        box-shadow: 0 0 0.5em #5eb524;
+    }
+    48% {
+        box-shadow: 0 0 0.5em #eacd25;
+    }
+    64% {
+        box-shadow: 0 0 0.5em #ed8080;
+    }
+    80% {
+        box-shadow: 0 0 0.5em #2a77d6;
+    }
+    100% {
+        box-shadow: 0 0 0.5em #5eb524;
+    }
+    80% {
+        box-shadow: 0 0 0.5em #2a77d6;
+    }
+    64% {
+        box-shadow: 0 0 0.5em #ed8080;
+    }
+    48% {
+        box-shadow: 0 0 0.5em #eacd25;
+    }
+    32% {
+        box-shadow: 0 0 0.5em #5eb524;
+    }
+    16% {
+        box-shadow: 0 0 0.5em #2a77d6;
+    }
+    0% {
+        box-shadow: 0 0 0.5em #ed8080;
+    }
+}

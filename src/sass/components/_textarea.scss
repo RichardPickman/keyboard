@@ -1,3 +1,5 @@
+@use '../abstracts/animations';
+
 .text {
     display: flex;
     justify-content: center;
@@ -7,9 +9,7 @@
     margin: 10px;
     resize: none;
     outline: none;
-    color: #B22222;
-    background-color: black;
-    box-shadow: 0 0 0.3em #B22222, inset 0 0 black;
+    animation: rgbShadow 10s infinite;
     font-size: 3em;
     padding: 14px;
     border-radius: 10px;
