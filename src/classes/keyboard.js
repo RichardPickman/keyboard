@@ -8,6 +8,7 @@ class Keyboard {
     this.caps = false;
     this.shift = false;
     this.sound = new Audio(Key);
+    this.sound.volume = 0.3;
   }
 
   play() {
