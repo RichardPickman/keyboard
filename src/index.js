@@ -38,7 +38,7 @@ window.onload = function App() {
         state.layout = layout[`${language}_SHIFT`];
         state.shift = true;
       }
-      
+
       changeKeys(state.layout);
     }
 
