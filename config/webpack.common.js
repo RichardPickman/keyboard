@@ -38,11 +38,11 @@ module.exports = {
                 use: ['babel-loader']
             },
             {
-                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                test: /\.(?:ico|gif|png|jpg|jpeg|mp3)$/i,
                 type: 'asset/resource',
             },
             {
-                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                test: /\.(woff(2)?|eot|ttf|otf|svg)$/,
                 type: 'asset/inline'
             }
         ],
