@@ -16,7 +16,6 @@ class Keyboard {
   }
 
   stop() {
-    this.sound.pause();
     this.sound.currentTime = 0;
   }
 }

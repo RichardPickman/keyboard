@@ -13,8 +13,8 @@ import Keyboard from './classes/keyboard';
 window.onload = function App() {
   createElements();
   const state = new Keyboard();
-  const { currentLanguage } = state;
   getLanguageFromStorage(state);
+  const { currentLanguage } = state;
   const shortcuts = [];
   let language = currentLanguage;
 
