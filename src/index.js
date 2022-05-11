@@ -19,36 +19,40 @@ window.onload = function App() {
   let language = currentLanguage;
 
   const changeLayout = (event) => {
-    if (event === 'CapsLock' && state.caps === false) {
-      state.layout = layout[`${language}_CAPS`];
-
+    if (event === 'CapsLock') {
+      if (state.caps) {
+        state.layout = layout[`${language}`];
+        state.caps = false;
+      } else {
+        state.layout = layout[`${language}_CAPS`];
+        state.caps = true;
+      }
       changeKeys(state.layout);
-
-      state.caps = true;
-    } else if (event === 'CapsLock' && state.caps === true) {
-      state.layout = layout[`${language}`];
-
-      changeKeys(state.layout);
-
-      state.caps = false;
     }
 
     if (event === 'ShiftLeft' || event === 'ShiftRight') {
-      state.layout = layout[`${language}_SHIFT`];
-
+      if (state.shift) {
+        state.layout = layout[`${language}`];
+        state.shift = false;
+      } else {
+        state.layout = layout[`${language}_SHIFT`];
+        state.shift = true;
+      }
+      
       changeKeys(state.layout);
-
-      state.shift = true;
     }
 
     textAreaHandler(event, state);
   };
 
   document.addEventListener('keydown', (event) => {
+    const { repeat } = event;
     event.preventDefault();
     if (!layout.CODES.includes(event.code)) return;
-
+    state.stop();
+    if (!repeat) state.play();
     changeLayout(event.code);
+
     if (event.code === 'ControlLeft') shortcuts.push('ControlLeft');
     if (event.code === 'AltLeft') shortcuts.push('AltLeft');
 
@@ -58,11 +62,12 @@ window.onload = function App() {
       }
 
       shortcuts.length = 0;
-    }, 300);
+    }, 200);
   });
 
   document.addEventListener('keyup', (event) => {
     if (!layout.CODES.includes(event.code)) return;
+
     const keyboard = document.querySelectorAll('.key');
     const index = Array.from(keyboard).findIndex((button) => button.id === event.code);
     keyboard[index].classList.remove('setColor');
@@ -76,11 +81,12 @@ window.onload = function App() {
 
   document.querySelectorAll('.key').forEach((key) => {
     key.addEventListener('click', (e) => {
+      state.stop();
+      state.play();
       const button = e.target.closest('button');
+      changeLayout(button.id);
       changeColor(button);
       setTimeout(() => button.classList.remove('setColor'), 100);
-
-      textAreaHandler(button.id, state);
     });
   });
 };

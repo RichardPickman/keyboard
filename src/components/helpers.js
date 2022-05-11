@@ -64,6 +64,8 @@ export const textAreaHandler = (symbol, keyboardState) => {
 
   if (currentLetter === 'Space') {
     handleText('append', ' ');
+  } else if (currentLetter === 'Enter') {
+    handleText('append', '\n');
   } else if (currentLetter === 'Backspace') {
     handleText('remove');
   } else if (currentLetter === 'Tab') {
